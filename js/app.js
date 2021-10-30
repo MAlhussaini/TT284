@@ -1,5 +1,5 @@
 function home_redirect() {
-    location.replace("./home.html");
+    location.replace("./index.html");
 }
 
 
