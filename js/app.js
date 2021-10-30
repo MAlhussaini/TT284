@@ -2,13 +2,24 @@ function home_redirect() {
     location.replace("./home.html");
 }
 
-var pwd1 = document.getElementById("pwd");
-var pwd2 = document.getElementById("password");
-var capital = document.getElementById("capital");
-var letter = document.getElementById("letter");
-var length = document.getElementById("length");
-var number = document.getElementById("number");
 
+const details = document.querySelectorAll('.link')
+const pwd1 = document.getElementById("pwd");
+const pwd2 = document.getElementById("password");
+const capital = document.getElementById("capital");
+const letter = document.getElementById("letter");
+const length = document.getElementById("length");
+const number = document.getElementById("number");
+
+details.forEach(function(currentItem) {
+    console.log(currentItem.classList)
+    console.log(currentItem.parentElement.lastElementChild.classList)
+    currentItem.addEventListener('click', toggle_detail)
+})
+
+function toggle_detail(event) {
+    event.currentTarget.parentElement.lastElementChild.classList.toggle("hidden");
+}
 
 function email_validation() {
     validation_msg = document.getElementById('error-msg')
@@ -43,7 +54,7 @@ function pwd1_onblur() {
 
 function pwd1_onkeyup() {
     // When the user starts to type something inside the password field
-    var lowerCaseLetters = /[a-z]/g;
+    const lowerCaseLetters = /[a-z]/g;
     // Validate lowercase letters
     if (pwd1.value.match(lowerCaseLetters)) {
         letter.classList.remove("invalid");
@@ -54,7 +65,7 @@ function pwd1_onkeyup() {
     }
 
     // Validate capital letters
-    var upperCaseLetters = /[A-Z]/g;
+    const upperCaseLetters = /[A-Z]/g;
     if (pwd1.value.match(upperCaseLetters)) {
         capital.classList.remove("invalid");
         capital.classList.add("valid");
@@ -64,7 +75,7 @@ function pwd1_onkeyup() {
     }
 
     // Validate numbers
-    var numbers = /[0-9]/g;
+    const numbers = /[0-9]/g;
     if (pwd1.value.match(numbers)) {
         number.classList.remove("invalid");
         number.classList.add("valid");

@@ -15,11 +15,6 @@
     max-height: 200px;
 }
 
-.row {
-    margin-right: -15px;
-    margin-left: -15px;
-}
-
 .show {
     display: block;
 }
@@ -27,4 +22,14 @@
 .col-sm-4 {
     display: flex;
     flex-wrap: wrap;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.link {
+    cursor: pointer;
+    color: blue;
+    text-decoration: underline;
 }
