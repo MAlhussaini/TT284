@@ -10,6 +10,7 @@
         @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
     </style>
     <link rel="stylesheet" href="./css/app.css">
+    <link rel="stylesheet" href="./css/store.css">
     <link rel="icon" href="./img/Icon.jpg">
 </head>
 
@@ -31,17 +32,40 @@
     </nav>
     <section>
         <div class="row shows">
-            {%for show, venue, artist in shows %}
             <div class="col-sm-4">
                 <div class="tile tile-show">
-                    <img src="{{ artist.image_link }}" alt="Artist Image" />
-                    <h4>{{ show.event_time|datetime('full') }}</h4>
-                    <h5><a href="/artists/{{ show.artist_id }}">{{ artist.name }}</a></h5>
-                    <p>playing at</p>
-                    <h5><a href="/venues/{{ show.venue_id }}">{{ venue.name }}</a></h5>
+                    <img src="./img/laptop main.jpg" alt="laptop Image" />
+                    <h4>Laptops</h4>
+                    <h5><a href="#">Show Category</a></h5>
+                    <p>Starting off</p>
+                    <h5>1,500 $</a>
+                    </h5>
+                </div>
+                <div class="tile tile-show">
+                    <img src="./img/laptop main.jpg" alt="laptop Image" />
+                    <h4>Laptops</h4>
+                    <h5><a href="#">Show Category</a></h5>
+                    <p>Starting off</p>
+                    <h5>1,500 $</a>
+                    </h5>
+                </div>
+                <div class="tile tile-show">
+                    <img src="./img/laptop main.jpg" alt="laptop Image" />
+                    <h4>Laptops</h4>
+                    <h5><a href="#">Show Category</a></h5>
+                    <p>Starting off</p>
+                    <h5>1,500 $</a>
+                    </h5>
+                </div>
+                <div class="tile tile-show">
+                    <img src="./img/laptop main.jpg" alt="laptop Image" />
+                    <h4>Laptops</h4>
+                    <h5><a href="#">Show Category</a></h5>
+                    <p>Starting off</p>
+                    <h5>1,500 $</a>
+                    </h5>
                 </div>
             </div>
-            {% endfor %}
         </div>
     </section>
 </body>

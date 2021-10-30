@@ -440,6 +440,54 @@ button[disabled] {
 }
 
 
+/* The message box is shown when the user clicks on the password field */
+
+#message {
+    display: none;
+    background: #f1f1f1;
+    color: #000;
+    position: relative;
+    padding: 20px;
+    margin-top: 10px;
+    width: fit-content;
+}
+
+#message p {
+    padding: 7px;
+    padding-left: 0;
+    font-size: 12px;
+    margin-left: 25;
+}
+
+
+/* Add a green text color and a checkmark when the requirements are right */
+
+.valid {
+    color: green;
+}
+
+.valid:before {
+    position: relative;
+    left: -35px;
+    content: "✔";
+    margin-left: 35px;
+}
+
+
+/* Add a red text color and an "x" when the requirements are wrong */
+
+.invalid {
+    color: red;
+}
+
+.invalid:before {
+    position: relative;
+    left: -35px;
+    content: "✖";
+    margin-left: 35px;
+}
+
+
 /* media at 768 width */
 
 @media (max-width: 768px) {
