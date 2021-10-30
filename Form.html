@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=1" />
+    <title>MAlhussaini Electronic Devices Store</title>
+    <link rel="stylesheet" href="./css/form.css">
+</head>
+
+<body>
+    <div class="bodyWrapper">
+        <form class="registration-form" action="./about.html" method="post" name="registration" id="registration" accept-charset="utf-8" autocomplete="on">
+            <div class="formLogoWrapper" id="headerWrapper">
+                <img loading="lazy" class="formLogoImg" src="./img/ecommerce website.jpg">
+            </div>
+            <div class="formFormWrapper">
+                <ul class="formListWrapper">
+                    <li class="shrink">
+                        <label for="First-Name" class="inout-box-label">First Name
+                            <span class="form-required"> * </span>
+                        </label>
+                        <div class="inputWrapper">
+                            <input type="text" class="input-box" name="First-Name" id="First-Name" autocomplete="on" autofocus placeholder="First Name" pattern="[A-Z a-z]{3,}" title="First Name should not contain a number." required>
+                            <!-- <label class="form-sub-label" for="First-Name" aria-hidden="false"> lable </label> -->
+                        </div>
+                    </li>
+                    <li class="shrink">
+                        <label for="Last-Name" class="inout-box-label">Last Name
+                            <span class="form-required"> * </span>
+                        </label>
+                        <div class="inputWrapper">
+                            <input type="text" class="input-box" name="Last-Name" id="Last-Name" autocomplete="on" autofocus placeholder="Last Name" pattern="[A-Z a-z]{3,}" title="Last Name should not contain a number." required>
+                            <!-- <label class="form-sub-label" for="Last-Name" aria-hidden="false"> lable </label> -->
+                        </div>
+                    </li>
+
+                    <li class="full">
+                        <label for="phone-number" class="inout-box-label">Phone Number
+                            <span class="form-required"> * </span>
+                        </label>
+                        <div class="inputWrapper">
+                            <input type="text" class="input-box" name="phone-number" id="phone-number" autofocus pattern="05[0-9]{8}" placeholder="05XXXXXXXX" title="A valid number would look similar to this 0500562223." autocomplete="on" required>
+                        </div>
+                    </li>
+                    <li class="shrink">
+                        <label for="city" class="inout-box-label">City
+                            <span class="form-required"> * </span>
+                        </label>
+                        <div class="inputWrapper">
+                            <input type="text" class="input-box" name="city" id="city" autofocus pattern="[A-Z a-z]{2,}" title="Please chose a valid city name." placeholder="City" autocomplete="on" required>
+                        </div>
+                    </li>
+                    <li class="shrink">
+                        <label for="address" class="inout-box-label">Address
+                            <span class="form-required"> * </span>
+                        </label>
+                        <div class="inputWrapper">
+                            <input type="text" class="input-box" name="address" id="address" autofocus placeholder="address" autocomplete="on" required>
+                        </div>
+                    </li>
+                    <li class="full divider" aria-label="Divider" data-component="divider">
+                        <div class="divider"></div>
+                    </li>
+                    <li class="full">
+                        <label for="email" class="inout-box-label">Email
+                            <span class="form-required"> * </span>
+                        </label>
+                        <div class="inputWrapper">
+                            <input type="text" class="input-box" name="email" id="email" onblur="email_validation()" autofocus pattern="[A-Za-z0-9._%+-]{1,}@[A-Za-z0-9.-]{1,}\.[A-Za-z]{2,}$" title="I wonder if this is really your email." placeholder="email" autocomplete="on" required>
+                            <div class="form-error-message" id="error-msg" role="alert"><img src="./img/alret_error.png"> it doesn't look like you've inputted a valid email address.
+                                <div class="form-error-arrow">
+                                    <div class="form-error-arrow-inner"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="shrink">
+                        <label for="pwd" class="inout-box-label">Password
+                            <span class="form-required"> * </span>
+                        </label>
+                        <div class="inputWrapper">
+                            <input type="password" id="pwd" name="pwd" class="input-box" autofocus placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters"
+                                autocomplete="off" required>
+                        </div>
+                    </li>
+                    <li class="shrink">
+                        <label for="password" class="inout-box-label">Confirm Password
+                            <span class="form-required"> * </span>
+                        </label>
+                        <div class="inputWrapper">
+                            <input type="password" id="password" onblur="password_validation()" name="password" class="input-box" autofocus placeholder="Password confirmations" title="Must match the chosen password." autocomplete="off" required>
+                        </div>
+                    </li>
+
+                    <li class="full" data-type="control_checkbox" id="id_86">
+                        <label class="inout-box-label list-checkbox-label" for="check-boxes">
+                            Confirmations:
+
+                            <span class="form-required"> * </span>
+                        </label>
+                        <div class="full" name="check-boxes">
+                            <div class="form-single-column" role="group" aria-labelledby="checkboxes" data-component="checkboxes">
+                                <span class="form-checkbox-item">
+                                    <span class="dragger-item"></span>
+                                <input type="checkbox" aria-describedby="checkboxes" class="form-checkbox" id="check-box_1" name="check-box" value="I have read the registration policy." required="" autofocus placeholder="">
+                                <label id="label_check-box_1" class="checkbox-label" for="check-box_1">
+                                        I have read the registration policy.
+                                    </label>
+                                </span>
+                                <span class="form-checkbox-item">
+                                    <span class="dragger-item">
+                                    </span>
+                                <input type="checkbox" aria-describedby="checkboxes" class="form-checkbox" id="check-box_2" name="check-box" value="I want to receive news letter." autofocus placeholder="">
+                                <label id="label_check-box_2" class="checkbox-label" for="check-box_2"> I want to receive news letter. </label>
+                                </span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="full">
+                        <div class="full">
+                            <button id="submit" autofocus type="submit" class="btn" value="submit">
+                                Submit
+                            </button>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
+<script>
+    var pwd1 = document.getElementById("pwd");
+    var pwd2 = document.getElementById("password");
+    var letter = document.getElementById("letter");
+    var capital = document.getElementById("capital");
+    var number = document.getElementById("number");
+    var length = document.getElementById("length");
+
+
+    function email_validation() {
+        validation_msg = document.getElementById('error-msg')
+        email = document.getElementById('email').value;
+        const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        console.log(re.test(String(email).toLowerCase()));
+        if (re.test(String(email).toLowerCase())) {
+            validation_msg.style.display = "none";
+        } else {
+            validation_msg.style.display = "inline-block";
+        }
+    }
+
+    function password_validation() {
+        console.log("It is valid");
+    }
+
+
+    // When the user clicks on the password field, show the message box
+    myInput.onfocus = function() {
+        document.getElementById("message").style.display = "block";
+    }
+
+    // When the user clicks outside of the password field, hide the message box
+    myInput.onblur = function() {
+        document.getElementById("message").style.display = "none";
+    }
+
+    // When the user starts to type something inside the password field
+    myInput.onkeyup = function() {
+        // Validate lowercase letters
+        var lowerCaseLetters = /[a-z]/g;
+        if (myInput.value.match(lowerCaseLetters)) {
+            letter.classList.remove("invalid");
+            letter.classList.add("valid");
+        } else {
+            letter.classList.remove("valid");
+            letter.classList.add("invalid");
+        }
+
+        // Validate capital letters
+        var upperCaseLetters = /[A-Z]/g;
+        if (myInput.value.match(upperCaseLetters)) {
+            capital.classList.remove("invalid");
+            capital.classList.add("valid");
+        } else {
+            capital.classList.remove("valid");
+            capital.classList.add("invalid");
+        }
+
+        // Validate numbers
+        var numbers = /[0-9]/g;
+        if (myInput.value.match(numbers)) {
+            number.classList.remove("invalid");
+            number.classList.add("valid");
+        } else {
+            number.classList.remove("valid");
+            number.classList.add("invalid");
+        }
+
+        // Validate length
+        if (myInput.value.length >= 8) {
+            length.classList.remove("invalid");
+            length.classList.add("valid");
+        } else {
+            length.classList.remove("valid");
+            length.classList.add("invalid");
+        }
+    }
+</script>
