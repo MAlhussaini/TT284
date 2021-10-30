@@ -1,0 +1,30 @@
+.shows .tile-show {
+    height: 350px;
+    margin: 20px auto;
+}
+
+.tile {
+    text-align: center;
+    padding: 15px 25px;
+    border: solid 1px #ebebeb;
+    height: 325px;
+    margin-bottom: 15px;
+}
+
+.tile img {
+    max-height: 200px;
+}
+
+.row {
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.show {
+    display: block;
+}
+
+.col-sm-4 {
+    display: flex;
+    flex-wrap: wrap;
+}
