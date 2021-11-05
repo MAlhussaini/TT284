@@ -33,3 +33,9 @@
     color: blue;
     text-decoration: underline;
 }
+
+#compare {
+    margin-top: 15px;
+    padding-left: 40px;
+    padding-bottom: 70px;
+}
