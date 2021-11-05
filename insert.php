@@ -1,6 +1,4 @@
 <?php
-        echo "In the insert file";
-        // Assign Data to variable
         $first_name = $_POST['First_Name'];
         $last_name = $_POST['Last_Name'];
         $password = $_POST['password'];
@@ -8,9 +6,8 @@
         $email = $_POST['email'];
         $city = $_POST['city'];
         $address = $_POST['address'];
-        
-    if (!empty($first_name) || !empty($last_name) || !empty($password) || !empty($phone_number) || !empty($email) || !empty($city) || !empty($address) ) {
-    
+if (!empty($first_name) ||!empty($last_name) ||!empty($password) ||!empty($phone_number) || !empty($email) || !empty($city) || !empty($address)) {
+
         // Connect to Database
         $host = "localhost";
         $dbUsername = "root";
@@ -22,7 +19,7 @@
         }
         else {
             $Select = "SELECT email FROM registration WHERE email = ? LIMIT 1"; // To limit emails to one email
-            $Insert = "INSERT INTO registration(First_Name, Last_Name, password, phone_number,email, city, address) values(?, ?, ?, ?, ?, ?, ?)";
+            $Insert = "INSERT INTO registration (first_name, last_name, password, phone,email, city, address) values(?, ?, ?, ?, ?, ?, ?)";
             $stmt = $conn->prepare($Select);
             $stmt->bind_param("s", $email);
             $stmt->execute();
@@ -33,7 +30,15 @@
             if ($rnum == 0) {
                 $stmt->close();
                 $stmt = $conn->prepare($Insert);
-                $stmt->bind_param("ssssssi",$First_Name, $Last_Name, $password, $email, $city, $address, $phone_number);
+                if ($stmt) {
+                    echo"prepare working";
+                }
+                else {
+                    echo"prepare error";
+                }
+                echo"First";
+                $stmt->bind_param("ssssiss",$first_name, $last_name, $password, $email, $phone_number, $city, $address);
+                echo"Second";
                 if ($stmt->execute()) {
                     echo "New record inserted successfully.";
                 }
