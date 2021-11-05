@@ -30,15 +30,7 @@ if (!empty($first_name) ||!empty($last_name) ||!empty($password) ||!empty($phone
             if ($rnum == 0) {
                 $stmt->close();
                 $stmt = $conn->prepare($Insert);
-                if ($stmt) {
-                    echo"prepare working";
-                }
-                else {
-                    echo"prepare error";
-                }
-                echo"First";
                 $stmt->bind_param("ssssiss",$first_name, $last_name, $password, $email, $phone_number, $city, $address);
-                echo"Second";
                 if ($stmt->execute()) {
                     echo "New record inserted successfully.";
                 }

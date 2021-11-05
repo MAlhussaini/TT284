@@ -104,3 +104,7 @@ function form_validation(event) {
         return false;
     }
 }
+
+document.getElementById("submit").onclick = function() {
+    location.href = "index.html";
+};
