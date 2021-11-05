@@ -105,6 +105,6 @@ function form_validation(event) {
     }
 }
 
-document.getElementById("submit").onclick = function() {
-    location.href = "index.html";
-};
+// document.getElementById("submit").onclick = function() {
+//     location.href = "index.html";
+// };
