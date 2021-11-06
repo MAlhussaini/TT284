@@ -36,7 +36,7 @@ if (!empty($first_name) || !empty($last_name) || !empty($password) || !empty($ph
                 echo $stmt->error;
             }
         } else {
-            echo "<script type='text/javascript'>alert('Someone already registers using this email.\nPlease try using different email.'); history.go(-1); </script>";
+            echo "<script type='text/javascript'>alert('Someone already registers using this email. Please try using different email.'); history.go(-1); </script>";
         }
         $stmt->close();
         $conn->close();
